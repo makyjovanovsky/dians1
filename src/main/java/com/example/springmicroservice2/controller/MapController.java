@@ -13,7 +13,7 @@ public class MapController {
 
     @PostMapping("/show-map")
     public String showMapWithGasStations(@RequestParam(name = "city") String city, Model model) {
-        final String uri = "http://localhost:8081/get-gas-stations?city=" + city;
+        final String uri = "https://makpetrol-service.herokuapp.com/get-gas-stations?city=" + city;
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<GasStationEntity[]> response =
                 restTemplate.getForEntity(
