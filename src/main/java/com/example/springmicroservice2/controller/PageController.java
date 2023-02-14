@@ -22,7 +22,7 @@ public class PageController {
 
     @GetMapping("/userDashboard")
     public String getUserDashboardPage(Model model) {
-        final String uri = "http://localhost:8081/get-all-gas-stations";
+        final String uri = "https://makpetrol-service.herokuapp.com/get-all-gas-stations";
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<GasStationEntity[]> response =
                 restTemplate.getForEntity(
